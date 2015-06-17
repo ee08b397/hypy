@@ -14,6 +14,8 @@ def construct_tree(edges, root):
 	children, parents = zip(*edges)
 	return {root: trees[root]}
 
+
+
 class Tree:
 	def __init__(self):
 		self.__nodes = {}
@@ -22,8 +24,9 @@ class Tree:
 	def nodes(self):
 		return self.__nodes
 		
+
 	def insert_node(self, nodeId, parent = None):	 
-		node = Node(nodeId)
+		node = Node(nodeId, parent)
 		self[nodeId] = node
 
 		if parent is not None:
@@ -31,12 +34,14 @@ class Tree:
 
 		return node
 	
+
 	def printTree(self, nodeId, depth = 0):
 		children = self[nodeId].children
 		if depth == 0:
 			print ("{0}".format(nodeId))
 		else:
-			print "\t" * depth, "{0}".format(nodeId)
+			#print "\t" * depth, "{0}".format(nodeId)
+			print "\t" * depth, "{0}, parent: {1}".format(nodeId, self[nodeId].parent)
 
 		depth += 1
 		for child in children:
