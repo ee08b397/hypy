@@ -3,7 +3,7 @@ import collections
 import logging
 import json
 
-from h3.tree import Tree
+from hypy.tree import Tree
 
 """
 An example for drawing a random spanning tree with 500 nodes without tagging or equators.

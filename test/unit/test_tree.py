@@ -3,7 +3,7 @@ import igraph
 import collections
 import json
 
-from h3.tree import Tree
+from hypy.tree import Tree
 
 """
 Test some properties of the tree structure

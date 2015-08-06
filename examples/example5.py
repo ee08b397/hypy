@@ -5,7 +5,7 @@ import json
 import csv
 from collections import deque
 
-from h3.tree import Tree
+from hypy.tree import Tree
 
 """
 Export layout to csv: x, y, z

@@ -5,7 +5,7 @@ import json
 import csv
 from timeit import Timer
 
-from h3.tree import Tree
+from hypy.tree import Tree
 
 """
 Benchmark the performance of getting layout
