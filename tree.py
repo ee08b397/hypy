@@ -405,3 +405,21 @@ class Tree(object):
         ax.set_ylabel("Y Label")
         ax.set_zlabel("Z Label")
         plt.show()
+
+"""
+A wrapper for all function calls to get the layout. 
+
+:param (int, int) edges: a tuple for a tree edge as (child, parent), default None
+:param int root: the root id of the tree, default None
+:return: returns a Tree structure with layout information
+"""
+
+
+def get_layout(root, edges):
+    tree = Tree(root, edges)
+    tree.set_node_depth()
+    tree.set_subtree_radius(edges)
+    tree.set_subtree_size(edges)
+    tree.sort_children_by_radius()
+    tree.set_placement()
+    return tree
